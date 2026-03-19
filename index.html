@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demos — Roy Rinberg</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f5f5f0;
+      color: #1a1a1a;
+      min-height: 100vh;
+    }
+
+    header {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .site-title {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .site-title span {
+      display: block;
+      font-size: 1rem;
+      font-weight: 300;
+      color: #666;
+      margin-top: 4px;
+      letter-spacing: 0;
+    }
+
+    .contact {
+      font-size: 0.8rem;
+      color: #888;
+      text-align: right;
+      max-width: 240px;
+      line-height: 1.5;
+    }
+
+    .contact strong {
+      font-weight: 500;
+      color: #555;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .demos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .demo-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .demo-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .demo-card-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #e8e8e3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .demo-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .demo-card-image .placeholder {
+      font-size: 0.8rem;
+      color: #aaa;
+      font-weight: 400;
+    }
+
+    .demo-card-body {
+      padding: 20px;
+    }
+
+    .demo-card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .demo-card-desc {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #555;
+      font-weight: 300;
+    }
+
+    @media (max-width: 640px) {
+      .demos-grid {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .contact {
+        text-align: left;
+      }
+
+      .site-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="site-title">
+      demos
+      <span>by Roy Rinberg</span>
+    </h1>
+    <p class="contact">
+      Something broken? Reach me on Signal: <strong>technicallyprivate.92</strong>
+    </p>
+  </header>
+
+  <main>
+    <div class="demos-grid">
+
+      <a class="demo-card" href="https://compression.royrinberg.com/" target="_blank" rel="noopener">
+        <div class="demo-card-image">
+          <span class="placeholder">image coming soon</span>
+        </div>
+        <div class="demo-card-body">
+          <div class="demo-card-title">Compression</div>
+          <p class="demo-card-desc">
+            An interactive exploration of data compression algorithms. See how different techniques reduce file sizes and understand the trade-offs between compression ratio and speed.
+          </p>
+        </div>
+      </a>
+
+      <a class="demo-card" href="https://inference-verification-updated-ui.debug.rinberg-lab.containers.tinfoil.dev/ui" target="_blank" rel="noopener">
+        <div class="demo-card-image">
+          <span class="placeholder">image coming soon</span>
+        </div>
+        <div class="demo-card-body">
+          <div class="demo-card-title">Inference Verification</div>
+          <p class="demo-card-desc">
+            A tool for verifying the integrity and correctness of machine learning inference. Ensures that model outputs haven't been tampered with using cryptographic attestation.
+          </p>
+        </div>
+      </a>
+
+      <a class="demo-card" href="https://qa-compression.royrinberg.com/" target="_blank" rel="noopener">
+        <div class="demo-card-image">
+          <span class="placeholder">image coming soon</span>
+        </div>
+        <div class="demo-card-body">
+          <div class="demo-card-title">QA Compression</div>
+          <p class="demo-card-desc">
+            A question-answering interface that demonstrates compression techniques applied to natural language. Explore how textual data can be efficiently compressed while preserving meaning.
+          </p>
+        </div>
+      </a>
+
+      <a class="demo-card" href="https://secrets.royrinberg.com/" target="_blank" rel="noopener">
+        <div class="demo-card-image">
+          <span class="placeholder">image coming soon</span>
+        </div>
+        <div class="demo-card-body">
+          <div class="demo-card-title">Secrets</div>
+          <p class="demo-card-desc">
+            A demo exploring secure secret sharing and management. See how sensitive information can be split, distributed, and reconstructed using cryptographic protocols.
+          </p>
+        </div>
+      </a>
+
+    </div>
+  </main>
+</body>
+</html>
