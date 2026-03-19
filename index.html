@@ -99,7 +99,8 @@
     .demo-card-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      padding: 12px;
     }
 
     .demo-card-image .placeholder {
@@ -149,11 +150,11 @@
 <body>
   <header>
     <h1 class="site-title">
-      demos
-      <span>by Roy Rinberg</span>
+      Demos!
+      <span>by <a href="https://royrinberg.com" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline; text-decoration-color: #ccc;">Roy Rinberg</a></span>
     </h1>
     <p class="contact">
-      Something broken? Reach me on Signal: <strong>technicallyprivate.92</strong>
+      Something broken? Please reach out by email or Signal: <strong>technicallyprivate.92</strong>
     </p>
   </header>
 
@@ -162,48 +163,48 @@
 
       <a class="demo-card" href="https://compression.royrinberg.com/" target="_blank" rel="noopener">
         <div class="demo-card-image">
-          <span class="placeholder">image coming soon</span>
+          <img src="assets/egress-limits.png" alt="Compression diagram">
         </div>
         <div class="demo-card-body">
-          <div class="demo-card-title">Compression</div>
+          <div class="demo-card-title">LLM-powered Arithmetic Compression</div>
           <p class="demo-card-desc">
-            An interactive exploration of data compression algorithms. See how different techniques reduce file sizes and understand the trade-offs between compression ratio and speed.
+            Arithmetic coding with LLMs (live demo). With error correction in the logits to account for non-determinism!
           </p>
         </div>
       </a>
 
       <a class="demo-card" href="https://inference-verification-updated-ui.debug.rinberg-lab.containers.tinfoil.dev/ui" target="_blank" rel="noopener">
         <div class="demo-card-image">
-          <span class="placeholder">image coming soon</span>
+          <img src="assets/inference_verification.webp" alt="Inference Verification (in a TEE!)">
         </div>
         <div class="demo-card-body">
           <div class="demo-card-title">Inference Verification</div>
           <p class="demo-card-desc">
-            A tool for verifying the integrity and correctness of machine learning inference. Ensures that model outputs haven't been tampered with using cryptographic attestation.
+            "Inference Verification" is the task of verify that tokens came from a model. Check out a live demo for running inference verification in a TEE - to provide hardware-enabled cryptographic guarantees that tokens really did come from a specific model.
           </p>
         </div>
       </a>
 
-      <a class="demo-card" href="https://qa-compression.royrinberg.com/" target="_blank" rel="noopener">
+      <div class="demo-card" onclick="window.open('https://qa-compression.royrinberg.com/', '_blank')" style="cursor: pointer;">
         <div class="demo-card-image">
-          <span class="placeholder">image coming soon</span>
+          <img src="assets/qa-diagram.png" alt="QA Compression diagram">
         </div>
         <div class="demo-card-body">
           <div class="demo-card-title">QA Compression</div>
           <p class="demo-card-desc">
-            A question-answering interface that demonstrates compression techniques applied to natural language. Explore how textual data can be efficiently compressed while preserving meaning.
+            Live demo for "Question-Asking" Compression - a novel technique we invented in our <a href="https://royrinberg.com/assets/papers/compression_powered_egress_limiting.pdf" target="_blank" rel="noopener" onclick="event.stopPropagation();" style="color: #555; text-decoration: underline;">paper</a> which enables compression of complex tasks in just 10 bits through the power of question asking! Check out the demo for a live demo of Haiku asking Opus questions.
           </p>
         </div>
-      </a>
+      </div>
 
       <a class="demo-card" href="https://secrets.royrinberg.com/" target="_blank" rel="noopener">
         <div class="demo-card-image">
-          <span class="placeholder">image coming soon</span>
+          <img src="assets/secrets.png" alt="Secrets">
         </div>
         <div class="demo-card-body">
           <div class="demo-card-title">Secrets</div>
           <p class="demo-card-desc">
-            A demo exploring secure secret sharing and management. See how sensitive information can be split, distributed, and reconstructed using cryptographic protocols.
+           I scraped a bunch of datasets and found credentials - some of which are valid! password is `demo` (any username).
           </p>
         </div>
       </a>
