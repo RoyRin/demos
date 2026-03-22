@@ -169,7 +169,7 @@
         <div class="demo-card-body">
           <div class="demo-card-title">LLM-powered Arithmetic Compression</div>
           <p class="demo-card-desc">
-            Arithmetic coding with LLMs (live demo). With error correction in the logits to account for non-determinism!
+            Lossless text compression via arithmetic coding over LLM probability distributions, with lightweight error correction for GPU non-determinism.
           </p>
         </div>
       </a>
@@ -179,9 +179,9 @@
           <img src="assets/inference_verification.png" alt="Inference Verification (in a TEE!)">
         </div>
         <div class="demo-card-body">
-          <div class="demo-card-title">Inference Verification (in a TEE!)</div>
+          <div class="demo-card-title">Inference Verification in a TEE</div>
           <p class="demo-card-desc">
-            "Inference Verification" is the task of verify that tokens came from a model. Check out a live demo for running inference verification in a TEE - to provide hardware-enabled cryptographic guarantees that tokens really did come from a specific model.
+            Detect steganographic data exfiltration by verifying that LLM-generated text honestly came from a specific model. Reduces exfiltratable information by ~100x. Live Demo runs inside an Nvidia H200 Trusted Execution Environment.
           </p>
         </div>
       </a>
